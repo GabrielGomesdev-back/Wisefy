@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wisefy</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="sidebar">
+
+            <div class="sidebar-wrapper">
+                <div class="sidebar__logo">
+                <img src="img/logo.png"/>
+                </div><!--Sidebar-Logo-->
+                <div class="sidebar__menu">
+                    <a class="sidebar__menu__selecionado" href="#"><i class="fas fa-home"></i> Início</a>
+                    <a href="#"><i class="fas fa-search"></i> Buscar</a>
+                    <a href="#"><i class="fas fa-database"></i> Biblioteca</a>
+                </div><!--Sidebar menu-->
+
+                <div class="sidebar__menu"> <!--sessão da sidebar-->
+                    <p class="sidebar__menu__title">Playlists</p>
+                    <div class="sidebar__menu__item">
+                        <div class="sidebar__menu__item__componente"> + </div>
+                        <spam>Criar Playlist</spam>
+                    </div>
+                    <div class="sidebar__menu__item">
+                        <div class="sidebar__menu__componente">
+                            <img src="img/like.png">
+                            <spam>Musicas Curtidas</spam>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar__playlists">
+                    <a href="">Playlist</a>
+                    <a href="">Playlist</a>
+                    <a href="">Playlist</a>
+                    <a href="">Playlist</a>
+                </div>
+            </div>
+        </div><!--Sidebar-->
+
+        <div class="main">
+            <div class="main-wrapper">
+                <div class="main__row">
+                    <div class="main__row__title"><h2>Hype</h2></div>
+                    
+                    <div class="main__col" data-image="img/Anitta.jpeg" data-artist="Top 50 Global" data-song="Anitta - Girl from Rio">
+                        <img src="img/top50global.jpeg">
+                        <h3>Top 50 Global</h3>
+                        <p>De Wisefycharts <u>PLAYLIST</u></p>
+                    </div>
+                    <div class="main__col" data-image="img/bipolar.jpeg" data-artist="Top 50 BR" data-song="Mc Davi, Mc Pedrinho e Mc Don Juan - Bipolar">
+                        <img src="img/top50br.jpg">
+                        <h3>Top 50 BR</h3>
+                        <p>De Wisefycharts <u>PLAYLIST</u></p>
+                    </div>
+                    <div class="main__col" data-image="img/Olivia.jpeg" data-artist="Top 50 USA" data-song="Olivia Rodrigo - good 4 u">
+                        <img src="img/top50usa.jpeg">
+                        <h3>Top 50 USA</h3>
+                        <p>De Wisefycharts <u>PLAYLIST</u></p>
+                    </div>
+                    <div class="main__col" data-image="img/Zitti.jpeg" data-artist="Top 50 RUS" data-song="ZITTI E BUONI - Maneskin">
+                        <img src="img/top50rus.jpeg">
+                        <h3>Top 50 RUS</h3>
+                        <p>De Wisefycharts <u>PLAYLIST</u></p>
+                    </div>
+                    <div class="main__col" data-image="img/POLO.jpeg" data-artist="Top 50 UK" data-song="POLO G - RAPSTAR">
+                        <img src="img/top50uk.jpeg">
+                        <h3>Top 50 UK</h3>
+                        <p>De Wisefycharts <u>PLAYLIST</u></p>
+                    </div>
+                    <div class="main__col" data-image="img/Olivia.jpeg" data-artist="Top 50 CAN" data-song="Olivia Rodrigo - good 4 u">
+                        <img src="img/top50ca.jpg">
+                        <h3>Top 50 CAN</h3>
+                        <p>De Wisefycharts <u>PLAYLIST</u></p>
+                    </div>
+                    <div class="main__col" data-image="img/Raul.jpeg" data-artist="Top 50 COL" data-song="Rauw Alejandro - Todo de Ti">
+                        <img src="img/top50co.jpeg">
+                        <h3>Top 50 COL</h3>
+                        <p>De Wisefycharts <u>PLAYLIST</u></p>
+                    </div>
+                    <div class="main__row__title"><h2><br>Playlists Salvas</br></h2></div>
+                    <div class="main__col" data-image="img/DOka.jpeg" data-artist="Trap Ouro" data-song="Sidoka - Não me sinto mal mais" data-file="assets/Sidoka.mp3">
+                        <img src="img/trap.jpeg">
+                        <h3>As 50 mais tocadas</h3>
+                        <p>De Wisefy <u>PLAYLIST</u></p>
+                </div>
+                <div class="main__col" data-image="img/panamera.jpeg" data-artist=" This is KayBlack" data-song="Jovem Dex e KayBlack - Panamera" data-file="assets/music.mp3">
+                    <img src="img/kayblack.jpeg">
+                    <h3>This is KayBlack</h3>
+                    <p>De Wisefy <u>PLAYLIST</u></p>
+                </div>
+            </div><!--Main_Row-->
+                
+        </div><!--Main wrapper-->
+
+    </div><!--Main-->
+
+    <div class="player">
+        <div class="player__artist">
+
+        </div>
+        <div class="player__control">
+            <div class="player__control__button">
+                <a id="backBtn" href=""><i class="fas fa-backward"></i></a>
+                <a style="display: none;" id="pauseBtn" href="#"><i class="far fa-pause-circle"></i></a>
+                <a id="playBtn" href="#"><i class="far fa-play-circle"></i></a>
+                <a id="forBtn" href=""><i class="fas fa-forward"></i></a>
+            </div>
+
+            <div class="player__control__progress">
+                <div style="width: 0%" class="player__control__progress__2">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <audio id="audioplayer" style="position: absolute; left: 0; top: 0; z-index: -9990; opacity: 0;" controls="">
+        </audio>
+
+        <script src="js/all.min.js"></script>
+
+        <script>
+
+            var audioplayer = document.getElementById('audioplayer');
+            var loaded = false;
+            var playBtn = document.getElementById('playBtn');
+            var pauseBtn = document.getElementById('pauseBtn');
+            var backBtn = document.getElementById('backBtn');
+
+            pauseBtn.addEventListener('click',(e)=>{
+                e.preventDefault();
+
+                playBtn.style.display = "inline";
+                pauseBtn.style.display = "none";
+                audioplayer.pause();
+
+                return false;
+            });
+
+            playBtn.addEventListener('click',(e)=>{
+                e.preventDefault();
+
+                playBtn.style.display = "none";
+                pauseBtn.style.display = "inline";
+                audioplayer.play();
+
+                return false
+            });
+
+            const playSong = (file) =>{
+
+                if(loaded == false){
+                    audioplayer.innerHTML = `<source src="`+file+`" type="audio/mp3" />`;
+                    loaded = true;
+                }
+
+                audioplayer.play();
+                playBtn.style.display = "none";
+                pauseBtn.style.display = "inline";
+                
+            };
+
+            const changeSong = (file) =>{
+                if(playSong == true){
+                    
+                }
+            }
+
+            document.querySelectorAll('.main__col').forEach(item =>{
+            
+                item.addEventListener('click' ,event =>{
+                    let image = item.getAttribute('data-image');
+                    let artist = item.getAttribute('data-artist');
+                    let song = item.getAttribute('data-song');
+                    let file = item.getAttribute('data-file');
+
+                    let playerArtistComponent = document.getElementsByClassName('player__artist');
+
+                    playerArtistComponent[0].innerHTML=`
+                        <div class="artist">
+                        <img src="`+image+`"/>
+                        <h3>`+artist+`</br><spam>`+song+`</spam></h3>
+                        </>`;
+                        playSong(file);
+                });
+            });
+        </script>
+
+    </body>
+</html>
+<!--    __________
+    /''T''|[___|___]
+    [---T--L -OlllllllO-]
+    ()_)"""()_)/"**"\)_)
+-->
